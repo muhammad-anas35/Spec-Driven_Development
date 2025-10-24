@@ -1,0 +1,82 @@
+
+{
+  "home": {
+    "name": "Anas",
+    "title": "Full Stack Developer",
+    "description": "I am a passionate full stack developer with experience in building web applications using modern technologies like React, Next.js, Node.js, and more. I am always eager to learn new things and take on new challenges."
+  },
+  "skills": [
+    {
+      "title": "Frontend Development",
+      "description": "Expert in React, Next.js, TypeScript, and modern UI frameworks"
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Creating intuitive and beautiful user interfaces"
+    },
+    {
+      "title": "Backend Development",
+      "description": "Building robust and scalable server-side applications"
+    },
+    {
+      "title": "Cloud Technologies",
+      "description": "Deployment and management on AWS, Azure, and GCP"
+    },
+    {
+      "title": "DevOps",
+      "description": "CI/CD, Docker, Kubernetes, and infrastructure automation"
+    },
+    {
+      "title": "Project Management",
+      "description": "Agile methodologies and team leadership"
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-commerce Platform",
+      "description": "A full-featured online store with payment processing and inventory management.",
+      "tags": ["React", "Node.js", "MongoDB"]
+    },
+    {
+      "title": "Task Management App",
+      "description": "A collaborative platform for teams to manage projects and tasks efficiently.",
+      "tags": ["Vue.js", "Firebase"]
+    },
+    {
+      "title": "Health Tracker",
+      "description": "A mobile application for tracking fitness activities and nutrition goals.",
+      "tags": ["React Native", "Redux"]
+    }
+  ],
+  "certificates": [
+    {
+      "title": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "date": "Jan 2023",
+      "credentialId": "AWS-12345"
+    },
+    {
+      "title": "Google Cloud Professional Developer",
+      "issuer": "Google Cloud Platform",
+      "date": "May 2022",
+      "credentialId": "GCP-67890"
+    },
+    {
+      "title": "Microsoft Certified: Azure Developer",
+      "issuer": "Microsoft Azure",
+      "date": "Aug 2022",
+      "credentialId": "AZ-55555"
+    },
+    {
+      "title": "Certified Kubernetes Administrator",
+      "issuer": "The Linux Foundation",
+      "date": "Oct 2023",
+      "credentialId": "CKA-99999"
+    }
+  ],
+  "contact": {
+    "email": "contact@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA"
+  }
+}

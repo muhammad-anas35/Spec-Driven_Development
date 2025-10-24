@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Futura-like geometric sans-serif font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  /* Apple liquid glass effect variables */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: rgba(255, 255, 255, 0.25);
+  --glass-backdrop-bg: rgba(255, 255, 255, 0.1);
+  --glass-text: rgba(0, 0, 0, 0.8);
+  --glass-border-radius: 16px;
+  --glass-blur: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    /* Dark mode glass effect */
+    --glass-bg: rgba(30, 30, 36, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-shadow: rgba(0, 0, 0, 0.25);
+    --glass-backdrop-bg: rgba(0, 0, 0, 0.1);
+    --glass-text: rgba(255, 255, 255, 0.9);
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Montserrat', 'Futura Std', 'Futura', 'Helvetica Neue', sans-serif;
+}
+
+/* Apple liquid glass effect */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  border-radius: var(--glass-border-radius);
+  color: var(--glass-text);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section styling */
+.section {
+  min-height: 100vh;
+  padding: 120px 20px 40px; /* Account for fixed navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Card styling with hover effect */
+.card {
+  background: var(--glass-backdrop-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--glass-border-radius);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-5px);
+}
+
+.card:hover::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  border-radius: calc(var(--glass-border-radius) + 3px);
+  background: linear-gradient(45deg, 
+    rgba(50, 219, 205, 0.9), 
+    rgba(250, 250, 250, 0.95));
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(45deg, 
+    rgba(50, 219, 205, 1), 
+    rgba(250, 250, 250, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Apple liquid glass effect for navbar */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, rgba(50, 219, 205, 0.9), rgba(250, 250, 250, 0.95));
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+  border-radius: 5px;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Futuristic font styling */
+.futura-font {
+  font-family: 'Montserrat', 'Futura Std', 'Futura', 'Helvetica Neue', sans-serif;
+}
