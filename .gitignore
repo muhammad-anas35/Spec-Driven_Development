@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Production builds
+.next/
+out/
+
+# Environment variables
+.env*.local
+.env*.backup
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Next.js specific
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+/.history
+
+# Sensitive files
+secrets/
+config/
+/.gemini/
+/.qwen
+/QWEN.md
+/implementation_plan.md
+/Test-Report.md
+/.env
